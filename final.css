@@ -46,15 +46,16 @@ body {
   color: white;
 }
 
-.card {
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+.card-img-top {
+  height: 500px;
+  object-fit: contain;
 }
 
-.card-img-top {
-  height: 600px;
-  object-fit: cover;
+.home_card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: none;
 }
 
 .top_vieww {
