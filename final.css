@@ -1,0 +1,87 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.mlink {
+  color: hsl(0, 79%, 34%);
+}
+
+.mlink:hover {
+  color: hsl(43, 94%, 55%);
+  transform: scale(1.15);
+}
+
+.rdtab {
+  background-color: hsl(0, 79%, 34%);
+  color: white;
+  border-radius: 7px;
+  border: none;
+}
+
+.yllwtab {
+  background-color: hsl(43, 94%, 55%);
+  color: white;
+  border-radius: 7px;
+  border: none;
+}
+
+.yllwtxt {
+  color: hsl(43, 94%, 55%);
+}
+
+.rdtxt {
+  color: hsl(0, 79%, 34%);
+}
+
+.grybtn {
+  background-color: hsl(0, 0%, 52%);
+  color: hsl(0, 79%, 34%);
+  border-radius: 7px;
+  border: none;
+}
+
+.rdtab:hover, .yllwtab:hover, .grybtn:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+  color: white;
+}
+
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+  height: 600px;
+  object-fit: cover;
+}
+
+.top_vieww {
+  width: 100%;
+  height: auto;
+  max-height: 550px;
+  object-fit: cover;
+  border-radius: 50px !important;
+  margin-top: 30px; 
+  margin-bottom: 30px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.review-img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+#mainNavbar {
+  transition: top 0.3s;
+}
+
+#footer{
+  background-color: hsl(0, 79%, 34%);
+}
