@@ -14,3 +14,20 @@ window.addEventListener('scroll', () => {
 
   lastScrollTop = scrollTop;
 });
+
+  document.querySelectorAll('.viewBtn').forEach(button => {
+    button.addEventListener('click', () => {
+      const name = button.getAttribute('data-name');
+      const price = button.getAttribute('data-price');
+      const calories = button.getAttribute('data-calories');
+      const imgSrc = button.getAttribute('data-img');
+
+      document.getElementById('productModalLabel').textContent = name;
+      document.getElementById('modalPrice').textContent = price;
+      document.getElementById('modalCalories').textContent = `Calories: ${calories}`;
+      document.getElementById('modalImage').src = imgSrc;
+
+      const modal = new bootstrap.Modal(document.getElementById('productModal'));
+      modal.show();
+    });
+  });
