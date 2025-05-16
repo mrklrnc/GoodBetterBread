@@ -106,3 +106,8 @@ html {
 html {
   scroll-behavior: smooth;
 }
+
+#menuBtn {
+  text-decoration: none;
+  color: white;
+}
