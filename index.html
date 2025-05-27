@@ -13,8 +13,8 @@
     <nav id="mainNavbar" class="navbar navbar-expand-lg bg-light fixed-top">
       <div class="container-fluid justify-content-between">
         <span class="navbar-brand mb-0 h1">
-          <img src="img/logo.png" alt="logo" class="img-fluid" style="width: 60px; margin-bottom: 10px;">
-          <b class="rdtxt fs-3">Good</b><b class="yllwtxt fs-3">Better</b><b class="rdtxt fs-3">Bread</b>
+          <img src="img/logo.png" alt="logo" class="header-logo" />
+          <span class="rdtxt fs-3">Good</span><span class="yllwtxt fs-3">Better</span><span class="rdtxt fs-3">Bread</span>
         </span>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -25,11 +25,10 @@
           <ul class="navbar-nav">
             <li class="nav-item mx-2"><a class="nav-link mlink" href="about.html">About</a></li>
             <li class="nav-item mx-2"><a class="nav-link mlink" href="menu.html">Menu</a></li>
-            <li class="nav-item mx-2"><a class="nav-link mlink" href="">Contact</a></li>
+            <li class="nav-item mx-2"><a class="nav-link mlink" href="#footer">Contact</a></li>
           </ul>
 
           <div class="ms-auto d-flex align-items-center">
-            <img src="img/yellow-cart-header.png" alt="cart" class="img-fluid mx-3" style="width: 30px;">
             <img src="img/person.png" alt="person" class="img-fluid" style="width: 30px;">
           </div>
         </div>
@@ -37,50 +36,45 @@
     </nav>
   
   <section class="container mt-5 py-5" id="home">
-    <h1 class="yllwtxt mt-5">Good Days Ahead with Good Better Bread</h1>
-    <p class="mt-3 fs-4">
-      Start your mornings right with a cup of freshly brewed coffee and a bite of something warm, soft, and baked to perfection. At <b>GoodBetterBread</b>, we believe that the little things—like the smell of fresh bread or the comfort of your favorite drink—can turn an ordinary day into a better one.
+    <h1 class="yllwtxt gbb-main-heading">Good Days Ahead with Good Better Bread</h1>
+    <p class="mt-3 fs-4 gbb-main-desc">
+      Start your mornings right with a cup of freshly brewed coffee and a bite of something warm, soft, and baked to perfection. At GoodBetterBread, we believe that the little things—like the smell of fresh bread or the comfort of your favorite drink—can turn an ordinary day into a better one.
     </p>
 
-    <p class="mt-3 fs-4">
-      Whether you're powering through work or pausing for a well-deserved break, we’re here to serve comfort, flavor, and feel-good moments in every order.
+    <p class="mt-3 gbb-main-desc">
+      Whether you're powering through work or pausing for a well-deserved break, we're here to serve comfort, flavor, and feel-good moments in every order.
     </p>
-    <button class="btn btn-danger btn-lg mt-3 rdtab">ORDER NOW</button>
+    <button class="btn btn-danger btn-lg mt-3 rdtab order-now-btn" onclick="document.getElementById('loginModal').style.display='flex'">ORDER NOW</button>
   </section>
 
-  <section class="container mt-5" id="why_us">
+  <section class="container" id="why_us">
     <h1 class="yllwtxt">Why Choose Us?</h1>
     <div class="row">
-      <div class="col-6 mt-5">
+      <div class="col-12 col-lg-3">
         <img src="img/coffee-icon.png" alt="coffee" style="width: 50px;">
         <div>
-          <h2 class="rdtxt mt-2"><b>Craft Coffee</b></h2>
+          <h2 class="rdtxt mt-2">Craft Coffee</h2>
           <p>From bold espressos to creamy lattes, our coffee is brewed carefully to keep you energized throughout the day.</p>
         </div>
       </div>
-
-      <div class="col-6 mt-5">
+      <div class="col-12 col-lg-3">
         <img src="img/phone-icon.png" alt="phone" style="width: 50px;">
         <div>
-          <h2 class="rdtxt mt-2"><b>Seamless Ordering</b></h2>
-          <p>Our user-friendly system lets you order your favorites in just a few clicks-because good food should't be hard to get.</p>
+          <h2 class="rdtxt mt-2">Seamless Ordering</h2>
+          <p>This system lets you order your favorites in just a few clicks-because good food should't be hard to get.</p>
         </div>
       </div>
-    </div>
-
-    <div class="row">
-      <div class="col-6 mt-5">
+      <div class="col-12 col-lg-3">
         <img src="img/bake-icon.png" alt="bake" style="width: 50px;">
         <div>
-          <h2 class="rdtxt mt-2"><b>Freshly Baked Goods</b></h2>
+          <h2 class="rdtxt mt-2">Freshly Baked Goods</h2>
           <p>Enjoy soft, flaky pastries, hearty breads, and indulgent sweetsmade fresh everyday.</p>
         </div>
       </div>
-
-      <div class="col-6 mt-5">
+      <div class="col-12 col-lg-3">
         <img src="img/heart-icon.png" alt="heart" style="width: 50px;">
         <div>
-          <h2 class="rdtxt mt-2"><b>Locally Inspired, Community Driven</b></h2>
+          <h2 class="rdtxt mt-2">Locally Inspired</h2>
           <p>We support local bakers, coffee roasters, and ingredient suppliers because we believe in growing together.</p>
         </div>
       </div>
@@ -88,13 +82,13 @@
   </section>
 
   <section class="container mt-5" id="favourites">
-    <h2 class="yllwtxt mt-5"><b>Customers' Favorites!</b></h2>
+    <h2 class="yllwtxt">Customers' Favorites!</h2>
       <div class="row">
         <div class="col-md-4 col-sm-6">
           <div class="card home_card">
             <img src="img/muffin-home.png" class="card-img-top custom-img-height" alt="Muffins" />
             <div class="card-body">
-              <h5 class="card-title rdtxt"><b>Blueberry Muffins</b></h5>
+              <h5 class="card-title rdtxt">Blueberry Muffins</h5>
               <p class="card-text">A soft buttery muffin bursting with juicy blueberries - a fruity favorite that's perfect for any time of the day.</p>
             </div>
           </div>
@@ -104,7 +98,7 @@
           <div class="card home_card">
             <img src="img/spanish-home.png" class="card-img-top custom-img-height" alt="Spanish Latte" />
             <div class="card-body">
-              <h5 class="card-title rdtxt"><b>Spanish Latte</b></h5>
+              <h5 class="card-title rdtxt">Spanish Latte</h5>
               <p class="card-text">Espresso sweetened with condensed milk and finished with steamed milk - rish smooth and indulgent.</p>
 
             </div>
@@ -113,9 +107,9 @@
 
         <div class="col-md-4 col-sm-6">
           <div class="card home_card">
-            <img src="img/rdv.jpg" class="card-img-top custom-img-height" alt="Red Velvet Crinkles" />
+            <img src="img/rv-home.png" class="card-img-top custom-img-height" alt="Red Velvet Crinkles" />
             <div class="card-body">
-              <h5 class="card-title rdtxt"><b>Red Velvet Crinkles</b></h5>
+              <h5 class="card-title rdtxt">Red Velvet Crinkles</h5>
               <p class="card-text">Soft, fudgy red velvet crinkles filled with a rich cream cheese filling - a perfect balance of sweet and tangy flavors in every bite.</p>
 
             </div>
@@ -125,16 +119,16 @@
   </section>
 
   <section class="container my-5" id="contact">
-    <h1 class="yllwtxt mb-4">Reviews</h1>
+    <h1 class="yllwtxt mb-4">Feedbacks</h1>
     <div class="row g-4">
       <div class="col-md-4">
         <div class="card p-4 shadow-sm rounded-4">
-          <p class="fs-5">“The Muffins was buttery and perfect!”</p>
+          <p class="review-message">"The Muffins was buttery and perfect!"</p>
           <div class="d-flex align-items-center mt-3">
-            <img src="https://via.placeholder.com/40" class="review-img me-3" alt="Angel" />
+            <img src="img/angel.jpg" class="review-img me-3" alt="Angel" />
             <div>
-              <strong>Angel Fernando</strong><br />
-              <small class="text-muted">Customer</small>
+              <span class="review-name">Angel Fernando</span><br />
+              <span class="review-role">CUSTOMER</span>
             </div>
           </div>
         </div>
@@ -142,12 +136,12 @@
 
       <div class="col-md-4">
         <div class="card p-4 shadow-sm rounded-4">
-          <p class="fs-5">“The iced latte is my new favourite!”</p>
+          <p class="review-message">"The iced latte is my new favorite!"</p>
           <div class="d-flex align-items-center mt-3">
-            <img src="https://via.placeholder.com/40" class="review-img me-3" alt="Gwyneth" />
+            <img src="img/gwen.jpg" class="review-img me-3" alt="Gwyenth" />
             <div>
-              <strong>Gwyneth Lim</strong><br />
-              <small class="text-muted">Customer</small>
+              <span class="review-name">Gwyenth Lim</span><br />
+              <span class="review-role">CUSTOMER</span>
             </div>
           </div>
         </div>
@@ -155,12 +149,12 @@
 
       <div class="col-md-4">
         <div class="card p-4 shadow-sm rounded-4">
-          <p class="fs-5">“Fast delivery and everything was fresh!”</p>
+          <p class="review-message">"Everything was fresh!"</p>
           <div class="d-flex align-items-center mt-3">
             <img src="img/markk.png" class="review-img me-3" alt="Mark" />
             <div>
-              <strong>Mark Rosagaran</strong><br />
-              <small class="text-muted">Customer</small>
+              <span class="review-name">Mark Rosagaran</span><br />
+              <span class="review-role">CUSTOMER</span>
             </div>
           </div>
         </div>
@@ -168,31 +162,29 @@
     </div>
   </section>
 
-  <section class="container-fluid bg-light py-4">
+  <section class="container-fluid bg-light craving-section">
     <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mx-5">
-      <strong class="yllwtxt fs-2 mb-3 mb-md-0">Craving Something Sweet?</strong>
+      <span id="craving-sweet" class="yllwtxt fs-2 mb-3 mb-md-0">Craving Something Sweet?</span>
       <div>
-        <button class="btn btn-danger btn-lg rdtab me-2">ORDER NOW</button>
-        <button class="btn btn-warning btn-lg yllwtab">VIEW MENU</button>
+        <button class="btn btn-danger btn-lg rdtab me-2 craving-btn" onclick="document.getElementById('loginModal').style.display='flex'">ORDER NOW</button>
+        <button class="btn btn-warning btn-lg yllwtab craving-btn" onclick="window.location.href='menu.html'">VIEW MENU</button>
       </div>
     </div>
   </section>
 
-  <hr />
-
+<div style="background: #fff; height: 2.5rem; width: 100%;"></div>
 <footer class="py-4" id="footer">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-6 mb-3 mb-md-0">
-          <strong class="yllwtxt fs-4">Connect With Us!</strong>
+          <span class="footer-heading yllwtxt fs-4">Connect With Us!</span>
           <ul class="list-unstyled mt-2">
-            <li><a href="https://www.facebook.com/goodbetterbread" class="text-white" target="_blank"><i class="bi bi-facebook me-2"></i>Facebook</a></li>
-            <li><a href="https://www.instagram.com/goodbetterbread_/" class="text-white" target="_blank"><i class="bi bi-instagram me-2"></i>Instagram</a></li>
+            <li><a href="https://www.facebook.com/goodbetterbread" class="footer-link text-white" target="_blank"><i class="bi bi-facebook me-2"></i>GoodBetterBread</a></li>
+            <li><a href="https://www.instagram.com/goodbetterbread_/" class="footer-link text-white" target="_blank"><i class="bi bi-instagram me-2"></i>goodbetterbread_</a></li>
           </ul>
         </div>
         <div class="col-md-6 text-md-end">
-          <img src="img/logo-white.png" alt="logo-white" class="img-fluid" style="width: 60px; margin-bottom: 10px;">
-          <strong class="fs-4"><b class="text-white">Good</b><b class="yllwtxt">Better</b><b class="text-white">Bread</b></strong>
+          <img src="img/gbb.png" alt="gbb logo" class="footer-gbb-logo">
         </div>
       </div>
     </div>
@@ -201,5 +193,139 @@
 
   <script src="tryy.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <div id="loginModal" class="login-modal" style="display:none;">
+    <div class="login-modal-content">
+      <span class="login-close" id="loginClose">&times;</span>
+      <div class="login-title">Login</div>
+      <div class="login-subtitle">Log in to your account to proceed with your order.</div>
+      <form id="loginForm">
+        <input id="loginEmail" type="email" placeholder="Email" required />
+        <input id="loginPassword" type="password" placeholder="Password" required />
+        <button type="submit" class="login-btn">LOG IN</button>
+      </form>
+      <div class="login-signup-link">Don't have an account?<a href="#" id="openSignup">Sign up.</a></div>
+    </div>
+  </div>
+
+  <div id="signupModal" class="login-modal" style="display:none;">
+    <div class="login-modal-content">
+      <span class="login-close" id="signupClose">&times;</span>
+      <div class="login-title">Sign Up</div>
+      <div class="login-subtitle">Create an account to proceed with your order.</div>
+      <form id="signupForm">
+        <div class="signup-names-row">
+          <input id="signupFirstName" type="text" placeholder="First Name" required />
+          <input id="signupLastName" type="text" placeholder="Last Name" required />
+        </div>
+        <input id="signupEmail" type="email" placeholder="Email" required />
+        <input id="signupPassword" type="password" placeholder="Password" required />
+        <button type="submit" class="login-btn">SIGN UP</button>
+      </form>
+      <div class="login-signup-link">Already have an account?<a href="#" id="backToLogin">Log in.</a></div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const personIcon = document.querySelector('img[alt="person"]');
+      const loginModal = document.getElementById('loginModal');
+      const loginClose = document.getElementById('loginClose');
+      const signupModal = document.getElementById('signupModal');
+      const signupClose = document.getElementById('signupClose');
+      const openSignup = document.getElementById('openSignup');
+      const backToLogin = document.getElementById('backToLogin');
+      const loginForm = document.getElementById('loginForm');
+      const signupForm = document.getElementById('signupForm');
+      if (personIcon && loginModal) {
+        personIcon.onclick = function() {
+          loginModal.style.display = 'flex';
+        };
+      }
+      if (loginForm) {
+        loginForm.onsubmit = function(e) {
+          e.preventDefault();
+          const email = document.getElementById('loginEmail').value.trim();
+          const password = document.getElementById('loginPassword').value.trim();
+          if (email && password) {
+            // Show success message
+            const msg = document.createElement('div');
+            msg.textContent = 'You have successfully logged in.';
+            msg.style.fontFamily = 'Poppins Light, sans-serif';
+            msg.style.fontSize = '1.1rem';
+            msg.style.color = 'hsl(0, 79%, 34%)';
+            msg.style.textAlign = 'center';
+            msg.style.marginTop = '1.2rem';
+            loginForm.parentElement.appendChild(msg);
+            // Add loading spinner
+            const spinner = document.createElement('div');
+            spinner.className = 'login-loading-spinner';
+            loginForm.parentElement.appendChild(spinner);
+            setTimeout(function() {
+              window.location.href = 'index.html';
+            }, 1500 + 1000);
+          }
+        };
+      }
+      if (loginModal && loginClose) {
+        loginClose.onclick = function() {
+          loginModal.style.display = 'none';
+        };
+        window.onclick = function(event) {
+          if (event.target === loginModal) {
+            loginModal.style.display = 'none';
+          }
+          if (event.target === signupModal) {
+            signupModal.style.display = 'none';
+          }
+        };
+      }
+      if (openSignup && signupModal && loginModal) {
+        openSignup.onclick = function(e) {
+          e.preventDefault();
+          loginModal.style.display = 'none';
+          signupModal.style.display = 'flex';
+        };
+      }
+      if (signupClose && signupModal) {
+        signupClose.onclick = function() {
+          signupModal.style.display = 'none';
+        };
+      }
+      if (backToLogin && signupModal && loginModal) {
+        backToLogin.onclick = function(e) {
+          e.preventDefault();
+          signupModal.style.display = 'none';
+          loginModal.style.display = 'flex';
+        };
+      }
+      if (signupForm) {
+        signupForm.onsubmit = function(e) {
+          e.preventDefault();
+          const firstName = document.getElementById('signupFirstName').value.trim();
+          const lastName = document.getElementById('signupLastName').value.trim();
+          const email = document.getElementById('signupEmail').value.trim();
+          const password = document.getElementById('signupPassword').value.trim();
+          if (firstName && lastName && email && password) {
+            // Show success message
+            const msg = document.createElement('div');
+            msg.textContent = 'You have successfully signed up.';
+            msg.style.fontFamily = 'Poppins Light, sans-serif';
+            msg.style.fontSize = '1.1rem';
+            msg.style.color = 'hsl(0, 79%, 34%)';
+            msg.style.textAlign = 'center';
+            msg.style.marginTop = '1.2rem';
+            signupForm.parentElement.appendChild(msg);
+            // Add loading spinner
+            const spinner = document.createElement('div');
+            spinner.className = 'login-loading-spinner';
+            signupForm.parentElement.appendChild(spinner);
+            setTimeout(function() {
+              window.location.href = 'index.html';
+            }, 1500 + 1000);
+          }
+        };
+      }
+    });
+  </script>
 </body>
 </html>

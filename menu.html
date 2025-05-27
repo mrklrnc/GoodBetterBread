@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu</title>
+    <title>GoodBetterBread</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="final.css" />
     <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet" />
@@ -13,8 +13,8 @@
     <nav id="mainNavbar" class="navbar navbar-expand-lg bg-light fixed-top">
       <div class="container-fluid justify-content-between">
         <span class="navbar-brand mb-0 h1">
-          <img src="img/logo.png" alt="logo" class="img-fluid" style="width: 60px; margin-bottom: 10px;">
-          <b class="rdtxt fs-3">Good</b><b class="yllwtxt fs-3">Better</b><b class="rdtxt fs-3">Bread</b>
+          <img src="img/logo.png" alt="logo" class="header-logo" />
+          <span class="rdtxt fs-3">Good</span><span class="yllwtxt fs-3">Better</span><span class="rdtxt fs-3">Bread</span>
         </span>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -25,53 +25,320 @@
           <ul class="navbar-nav">
             <li class="nav-item mx-2"><a class="nav-link mlink" href="index.html">Home</a></li>
             <li class="nav-item mx-2"><a class="nav-link mlink" href="about.html">About</a></li>
-            <li class="nav-item mx-2"><a class="nav-link mlink" href="">Contact</a></li>
+            <li class="nav-item mx-2"><a class="nav-link mlink" href="#footer">Contact</a></li>
           </ul>
 
           <div class="ms-auto d-flex align-items-center">
-            <img src="img/yellow-cart-header.png" alt="cart" class="img-fluid mx-3" style="width: 30px;">
-            <img src="img/person.png" alt="person" class="img-fluid" style="width: 30px;">
+            <img src="img/yellow-cart-header.png" alt="cart" class="img-fluid mx-3" style="width: 30px; cursor: pointer;" id="cartIcon">
+            <img src="img/person.png" alt="person" class="img-fluid" style="width: 30px;" onclick="document.getElementById('loginModal').style.display='flex'">
           </div>
         </div>
       </div>
     </nav>
 
-    <section class="container mt-5 pt-5 text-center" id="menu">
+    <section class="container pt-0 mt-0 text-center" id="menu">
         <div class="d-flex flex-column align-items-center">
-            <h1 class="yllwtxt fw-bold mt-5">Good Days Ahead with Good Better Bread</h1>
-            <span class="rdtxt fw-bold">Your cravings our passion. Let's make every day taste a little better — together.</span>
-                <div class="d-flex justify-content-between gap-5">
-                    <button class="btn btn-danger btn-lg rdtab mt-3 mb-3"><a href="menu.html" id="menuBtn">DRINKS</a></button>
-                    <button class="btn btn-danger btn-lg rdtab mt-3 mb-3"><a href="pastries.html" id="menuBtn">PASTRIES</a></button>
-                </div>
-                <div class="mt-2 mb-3 d-flex align-items-center bg-light searchh px-3">
-                    <i class="bi bi-list me-3 text-dark"></i>
-                    <input type="search" class="form-control border-0 bg-light shadow-none" placeholder="Search here..." />
-                    <i class="bi bi-search ms-3 text-dark"></i>
-                </div>
+            <h1 class="yllwtxt" style="margin-top: 7rem;">Good Days Ahead with Good Better Bread</h1>
+            <span class="rdtxt fw-bold" style="font-family: 'Poppins Light', sans-serif; font-size: 1.1rem; font-weight: 300;">Your cravings our passion. Let's make every day taste a little better — together.</span>
+            <div class="menu-tabs my-4" id="menuTabs">
+                <button class="menu-tab active menu-tab-pastries" id="pastriesTab" onclick="scrollToSection('pastriesSection', 'pastries'); toggleMenuCategory('pastries');">PASTRIES</button>
+                <button class="menu-tab menu-tab-drinks" id="drinksTab" onclick="scrollToSection('drinksSection', 'drinks'); toggleMenuCategory('drinks');">DRINKS</button>
+            </div>
+            <div class="mt-2 mb-3 d-flex align-items-center searchh px-0" style="font-family: 'Poppins Light', sans-serif;">
+                <input type="search" class="form-control border-0 bg-white shadow-none" placeholder="Search..." style="font-family: 'Poppins Light', sans-serif; font-size: 1.1rem;" />
+                <button class="search-icon-btn" type="button"><i class="bi bi-search"></i></button>
+            </div>
+            <div class="no-products-found" style="display:none;">No products found.</div>
         </div>
     </section>
 
-    <section class="mt-5">
+    <section class="mt-0 pt-0 mb-0 pb-0 crinkles-section" id="pastriesSection">
         <div class="container">
-            <h2 class="yllwtxt fw-bold mb-5">Caffeinated Drinks</h2>
-            <div class="row mb-5">
+            <h2 class="yllwtxt mb-0 mt-0" style="margin-top: 0; margin-bottom: 1rem;">Crinkles</h2>
+            <div class="row mb-0" style="margin-top: 1.5rem;">
+                <div class="col-md-4 col-sm-6">
+                    <div class="card home_card">
+                        <img src="img/matcha.png" class="card-img-top " alt="Matcha Crinkles" />
+                        <div class="card-body">
+                        <h5 class="card-title rdtxt" style="font-family: 'Poppins Light', sans-serif;"><b>Matcha Crinkles</b></h5>
+                        <span class="text-muted" style="font-family: 'Poppins Light', sans-serif; font-size: 1.1rem;">Calories: ~170 kcal</span>
+                        <div class="mt-1 d-flex justify-content-between align-items-center">
+                            <span class="fw-bold" style="font-family: 'Poppins SemiBold', sans-serif; font-size: 1.5rem;">₱150.00</span>
+                                <div class="d-flex align-items-center">
+                                    <button 
+                                    class="btn btn-warning btn-md yllwtab me-2 viewBtn" 
+                                    data-category="Crinkles"
+                                    data-name="Matcha Crinkles"
+                                    data-price="₱150.00" 
+                                    data-calories="~170 kcal" 
+                                    data-img="img/matcha.png"
+                                    data-description="Chewy matcha green tea cookies with a luscious cream cheese filling — earthy, creamy, and addictively good."
+                                    style="font-family: 'Poppins Light', sans-serif; font-size: 1.1rem; text-transform: uppercase;">
+                                    VIEW
+                                    </button>                                
+                                    <img src="img/red-fill-cart.png" alt="cart" class="redcartt">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card home_card">
+                        <img src="img/all_crnkls.jpg" class="card-img-top " alt="Assorted Crinkles" />
+                        <div class="card-body">
+                        <h5 class="card-title rdtxt" style="font-family: 'Poppins Light', sans-serif;"><b>Assorted Crinkles</b></h5>
+                        <span class="text-muted" style="font-family: 'Poppins Light', sans-serif; font-size: 1.1rem;">Calories: ~220 kcal</span>
+                        <div class="mt-1 d-flex justify-content-between align-items-center">
+                            <span class="fw-bold" style="font-family: 'Poppins SemiBold', sans-serif; font-size: 1.5rem;">₱320.00</span>
+                                <div class="d-flex align-items-center">
+                                    <button 
+                                    class="btn btn-warning btn-md yllwtab me-2 viewBtn" 
+                                    data-category="Crinkles"
+                                    data-name="Assorted Crinkles"
+                                    data-price="₱320.00" 
+                                    data-calories="~220 kcal" 
+                                    data-img="img/all_crnkls.jpg"
+                                    data-description="A trio of soft, fudgy crinkles: Red Velvet and Chocolate with cream cheese filling, and Classic with rich ube filling."
+                                    style="font-family: 'Poppins Light', sans-serif; font-size: 1.1rem; text-transform: uppercase;">
+                                    VIEW
+                                    </button>  
+                                    <img src="img/red-fill-cart.png" alt="cart" class="redcartt">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card home_card">
+                        <img src="img/redvelvet.png" class="card-img-top " alt="Red Velvet Crinkles" />
+                        <div class="card-body">
+                        <h5 class="card-title rdtxt" style="font-family: 'Poppins Light', sans-serif;"><b>Red Velvet Crinkles</b></h5>
+                        <span class="text-muted" style="font-family: 'Poppins Light', sans-serif; font-size: 1.1rem;">Calories: ~170 kcal</span>
+                        <div class="mt-1 d-flex justify-content-between align-items-center">
+                            <span class="fw-bold" style="font-family: 'Poppins SemiBold', sans-serif; font-size: 1.5rem;">₱150.00</span>
+                                <div class="d-flex align-items-center">
+                                    <button 
+                                    class="btn btn-warning btn-md yllwtab me-2 viewBtn" 
+                                    data-category="Crinkles"
+                                    data-name="Red Velvet Crinkles"
+                                    data-price="₱150.00" 
+                                    data-calories="~170 kcal" 
+                                    data-img="img/redvelvet.png"
+                                    data-description="Soft, fudgy red velvet crinkles filled with a rich cream cheese center — a perfect balance of sweet and tangy in every bite."
+                                    style="font-family: 'Poppins Light', sans-serif; font-size: 1.1rem; text-transform: uppercase;">
+                                    VIEW
+                                    </button>  
+                                    <img src="img/red-fill-cart.png" alt="cart" class="redcartt">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-0 pt-0 mb-0 pb-0">
+        <div class="container">
+            <h2 class="yllwtxt mb-0 mt-0" style="margin-top: 0; margin-bottom: 1rem;">Muffins</h2>
+            <div class="row mb-0" style="margin-top: 1.5rem;">
+                <div class="col-md-4 col-sm-6">
+                    <div class="card home_card">
+                        <img src="img/biscoffp.png" class="card-img-top " alt="Biscoff Muffin" />
+                        <div class="card-body">
+                        <h5 class="card-title rdtxt" style="font-family: 'Poppins Light', sans-serif;"><b>Biscoff Muffin</b></h5>
+                        <span class="text-muted" style="font-family: 'Poppins Light', sans-serif; font-size: 1.1rem;">Calories: ~270 kcal</span>
+                        <div class="mt-1 d-flex justify-content-between align-items-center">
+                            <span class="fw-bold" style="font-family: 'Poppins SemiBold', sans-serif; font-size: 1.5rem;">₱80.00</span>
+                                <div class="d-flex align-items-center">
+                                    <button 
+                                    class="btn btn-warning btn-md yllwtab me-2 viewBtn" 
+                                    data-category="Muffins"
+                                    data-name="Biscoff Muffin"
+                                    data-price="₱80.00" 
+                                    data-calories="~270 kcal"
+                                    data-img="img/biscoff.png"
+                                    data-description="Warm, spiced muffin swirled with Biscoff spread and topped with a crumble of Lotus biscuit — indulgent and irresistible."
+                                    style="font-family: 'Poppins Light', sans-serif; font-size: 1.1rem; text-transform: uppercase;">
+                                    VIEW
+                                    </button>  
+                                    <img src="img/red-fill-cart.png" alt="cart" class="redcartt">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card home_card">
+                        <img src="img/chocolate.png" class="card-img-top " alt="Chocolate Muffin" />
+                        <div class="card-body">
+                        <h5 class="card-title rdtxt" style="font-family: 'Poppins Light', sans-serif;"><b>Chocolate Muffin</b></h5>
+                        <span class="text-muted" style="font-family: 'Poppins Light', sans-serif; font-size: 1.1rem;">Calories: ~260 kcal</span>
+                        <div class="mt-1 d-flex justify-content-between align-items-center">
+                            <span class="fw-bold" style="font-family: 'Poppins SemiBold', sans-serif; font-size: 1.5rem;">₱80.00</span>
+                                <div class="d-flex align-items-center">
+                                    <button 
+                                    class="btn btn-warning btn-md yllwtab me-2 viewBtn" 
+                                    data-category="Muffins"
+                                    data-name="Chocolate Muffin"
+                                    data-price="₱80.00" 
+                                    data-calories="~260 kcal"
+                                    data-img="img/chocolate.png"
+                                    data-description="Rich and moist with a deep cocoa flavor and melty chocolate chips in every bite — a must for chocolate lovers."
+                                    style="font-family: 'Poppins Light', sans-serif; font-size: 1.1rem; text-transform: uppercase;">
+                                    VIEW
+                                    </button>  
+                                    <img src="img/red-fill-cart.png" alt="cart" class="redcartt">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card home_card">
+                        <img src="img/blueberry.png" class="card-img-top " alt="Blueberry Muffin" />
+                        <div class="card-body">
+                        <h5 class="card-title rdtxt" style="font-family: 'Poppins Light', sans-serif;"><b>Blueberry Muffin</b></h5>
+                        <span class="text-muted" style="font-family: 'Poppins Light', sans-serif; font-size: 1.1rem;">Calories: ~220 kcal</span>
+                        <div class="mt-1 d-flex justify-content-between align-items-center">
+                            <span class="fw-bold" style="font-family: 'Poppins SemiBold', sans-serif; font-size: 1.5rem;">₱80.00</span>
+                                <div class="d-flex align-items-center">
+                                    <button 
+                                    class="btn btn-warning btn-md yllwtab me-2 viewBtn" 
+                                    data-category="Muffins"
+                                    data-name="Blueberry Muffin"
+                                    data-price="₱80.00" 
+                                    data-calories="~220 kcal"
+                                    data-img="img/blueberry.png"
+                                    data-description="A soft, buttery muffin bursting with juicy blueberries — a fruity favorite that's perfect for any time of day."
+                                    style="font-family: 'Poppins Light', sans-serif; font-size: 1.1rem; text-transform: uppercase;">
+                                    VIEW
+                                    </button>  
+                                    <img src="img/red-fill-cart.png" alt="cart" class="redcartt">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-0 pt-0 mb-0 pb-0" style="margin-top:0;">
+        <div class="container">
+            <h2 class="yllwtxt mb-0 mt-0" style="margin-top: 0; margin-bottom: 1rem;">Cookies</h2>
+            <div class="row mb-0" style="margin-top: 1.5rem;">
+                <div class="col-md-4 col-sm-6">
+                    <div class="card home_card">
+                        <img src="img/ccc.png" class="card-img-top " alt="Chocolate Chips Cookies" />
+                        <div class="card-body">
+                        <h5 class="card-title rdtxt" style="font-family: 'Poppins Light', sans-serif;"><b>Chocolate Chips Cookies</b></h5>
+                        <span class="text-muted" style="font-family: 'Poppins Light', sans-serif; font-size: 1.1rem;">Calories: ~200 kcal</span>
+                        <div class="mt-1 d-flex justify-content-between align-items-center">
+                            <span class="fw-bold" style="font-family: 'Poppins SemiBold', sans-serif; font-size: 1.5rem;">₱110.00</span>
+                                <div class="d-flex align-items-center">
+                                    <button 
+                                    class="btn btn-warning btn-md yllwtab me-2 viewBtn" 
+                                    data-category="Cookies"
+                                    data-name="Chocolate Chips Cookies"
+                                    data-price="₱110.00" 
+                                    data-calories="~200 kcal" 
+                                    data-img="img/ccc.png"
+                                    data-description="A golden, chewy classic loaded with semi-sweet chocolate chips — soft in the center, crisp on the edges."
+                                    style="font-family: 'Poppins Light', sans-serif; font-size: 1.1rem; text-transform: uppercase;">
+                                    VIEW
+                                    </button>  
+                                    <img src="img/red-fill-cart.png" alt="cart" class="redcartt">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card home_card">
+                        <img src="img/redvelvetc.png" class="card-img-top " alt="Red Velvet Cookies" />
+                        <div class="card-body">
+                        <h5 class="card-title rdtxt" style="font-family: 'Poppins Light', sans-serif;"><b>Red Velvet Cookies</b></h5>
+                        <span class="text-muted" style="font-family: 'Poppins Light', sans-serif; font-size: 1.1rem;">Calories: ~220 kcal</span>
+                        <div class="mt-1 d-flex justify-content-between align-items-center">
+                            <span class="fw-bold" style="font-family: 'Poppins SemiBold', sans-serif; font-size: 1.5rem;">₱110.00</span>
+                                <div class="d-flex align-items-center">
+                                    <button 
+                                    class="btn btn-warning btn-md yllwtab me-2 viewBtn" 
+                                    data-category="Cookies"
+                                    data-name="Red Velvet Cookies"
+                                    data-price="₱110.00" 
+                                    data-calories="~220 kcal" 
+                                    data-img="img/redvelvetc.png"
+                                    data-description="A rich, velvety cookie with a hint of cocoa — soft and chewy, studded with creamy white chocolate chips for the perfect sweet bite."
+                                    style="font-family: 'Poppins Light', sans-serif; font-size: 1.1rem; text-transform: uppercase;">
+                                    VIEW
+                                    </button>  
+                                    <img src="img/red-fill-cart.png" alt="cart" class="redcartt">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card home_card">
+                        <img src="img/rrc.png" class="card-img-top " alt="Rocky Road Cookies" />
+                        <div class="card-body">
+                        <h5 class="card-title rdtxt" style="font-family: 'Poppins Light', sans-serif;"><b>Rocky Road Cookies</b></h5>
+                        <span class="text-muted" style="font-family: 'Poppins Light', sans-serif; font-size: 1.1rem;">Calories: ~240 kcal</span>
+                        <div class="mt-1 d-flex justify-content-between align-items-center">
+                            <span class="fw-bold" style="font-family: 'Poppins SemiBold', sans-serif; font-size: 1.5rem;">₱110.00</span>
+                                <div class="d-flex align-items-center">
+                                    <button 
+                                    class="btn btn-warning btn-md yllwtab me-2 viewBtn" 
+                                    data-category="Cookies"
+                                    data-name="Rocky Road Cookies"
+                                    data-price="₱110.00" 
+                                    data-calories="~240 kcal" 
+                                    data-img="img/rrc.png"
+                                    data-description="A chewy chocolate cookie loaded with gooey marshmallows, crunchy nuts, and chunks of chocolate — all the goodness of rocky road in one indulgent bite."
+                                    style="font-family: 'Poppins Light', sans-serif; font-size: 1.1rem; text-transform: uppercase;">
+                                    VIEW
+                                    </button>  
+                                    <img src="img/red-fill-cart.png" alt="cart" class="redcartt">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-0 pt-0 mb-0 pb-0" id="drinksSection" style="margin-top: 0;">
+        <div class="container">
+            <h2 class="yllwtxt mb-0 mt-0" style="margin-top: 0; margin-bottom: 1rem;">Caffeinated Drinks</h2>
+            <div class="row mb-0" style="margin-top: 1.5rem;">
                 <div class="col-md-4 col-sm-6">
                     <div class="card home_card">
                         <img src="img/salted.png" class="card-img-top " alt="Salted Caramel" />
                         <div class="card-body">
-                        <h5 class="card-title rdtxt"><b>Salted Caramel Latte</b></h5>
-                        <span class="text-muted">Calories: 250 kcal</span>
-                        <div class="mt-3 d-flex justify-content-between align-items-center">
-                            <span class="fw-bold fs-5">₱ 170.00</span>
+                        <h5 class="card-title rdtxt" style="font-family: 'Poppins Light', sans-serif;"><b>Salted Caramel Latte</b></h5>
+                        <span class="text-muted" style="font-family: 'Poppins Light', sans-serif; font-size: 1.1rem;">Calories: ~320 kcal</span>
+                        <div class="mt-1 d-flex justify-content-between align-items-center">
+                            <span class="fw-bold" style="font-family: 'Poppins SemiBold', sans-serif; font-size: 1.5rem;">₱170.00</span>
                                 <div class="d-flex align-items-center">
                                     <button 
                                     class="btn btn-warning btn-md yllwtab me-2 viewBtn" 
-                                    data-name="Salted Caramel Latte" 
-                                    data-price="₱ 170.00" 
-                                    data-calories="250 kcal" 
-                                    data-img="img/salted.png">
-                                    View
+                                    data-category="Caffeinated Drinks"
+                                    data-name="Salted Caramel Latte"
+                                    data-price="₱170.00" 
+                                    data-calories="~320 kcal"
+                                    data-img="img/salted.png"
+                                    data-description="Rich espresso blended with velvety milk and sweet, salty caramel syrup."
+                                    style="font-family: 'Poppins Light', sans-serif; font-size: 1.1rem; text-transform: uppercase;">
+                                    VIEW
                                     </button>                                
                                     <img src="img/red-fill-cart.png" alt="cart" class="redcartt">
                                 </div>
@@ -84,19 +351,22 @@
                     <div class="card home_card">
                         <img src="img/spanish.png" class="card-img-top " alt="Spanish Latte" />
                         <div class="card-body">
-                        <h5 class="card-title rdtxt"><b>Spanish Latte</b></h5>
-                        <span class="text-muted">Calories: 220 kcal</span>
-                        <div class="mt-3 d-flex justify-content-between align-items-center">
-                            <span class="fw-bold fs-5">₱ 180.00</span>
+                        <h5 class="card-title rdtxt" style="font-family: 'Poppins Light', sans-serif;"><b>Spanish Latte</b></h5>
+                        <span class="text-muted" style="font-family: 'Poppins Light', sans-serif; font-size: 1.1rem;">Calories: ~220 kcal</span>
+                        <div class="mt-1 d-flex justify-content-between align-items-center">
+                            <span class="fw-bold" style="font-family: 'Poppins SemiBold', sans-serif; font-size: 1.5rem;">₱180.00</span>
                                 <div class="d-flex align-items-center">
                                     <button 
                                     class="btn btn-warning btn-md yllwtab me-2 viewBtn" 
-                                    data-name="Spanish Latte" 
-                                    data-price="₱ 180.00" 
-                                    data-calories="220 kcal" 
-                                    data-img="img/spanish.png">
-                                    View
-                                    </button>    
+                                    data-category="Caffeinated Drinks"
+                                    data-name="Spanish Latte"
+                                    data-price="₱180.00" 
+                                    data-calories="220 kcal"
+                                    data-img="img/spanish.png"
+                                    data-description="Espresso sweetened with condensed milk and finished with steamed milk — rich, smooth, and indulgent."
+                                    style="font-family: 'Poppins Light', sans-serif; font-size: 1.1rem; text-transform: uppercase;">
+                                    VIEW
+                                    </button>  
                                     <img src="img/red-fill-cart.png" alt="cart" class="redcartt">
                                 </div>
                             </div>
@@ -108,18 +378,21 @@
                     <div class="card home_card">
                         <img src="img/biscoff.png" class="card-img-top " alt="Biscoff Latte" />
                         <div class="card-body">
-                        <h5 class="card-title rdtxt"><b>Biscoff Latte</b></h5>
-                        <span class="text-muted">Calories: 280 kcal</span>
-                        <div class="mt-3 d-flex justify-content-between align-items-center">
-                            <span class="fw-bold fs-5">₱ 200.00</span>
+                        <h5 class="card-title rdtxt" style="font-family: 'Poppins Light', sans-serif;"><b>Biscoff Latte</b></h5>
+                        <span class="text-muted" style="font-family: 'Poppins Light', sans-serif; font-size: 1.1rem;">Calories: ~280 kcal</span>
+                        <div class="mt-1 d-flex justify-content-between align-items-center">
+                            <span class="fw-bold" style="font-family: 'Poppins SemiBold', sans-serif; font-size: 1.5rem;">₱200.00</span>
                                 <div class="d-flex align-items-center">
                                     <button 
                                     class="btn btn-warning btn-md yllwtab me-2 viewBtn" 
-                                    data-name="Biscoff Latte" 
-                                    data-price="₱ 200.00" 
-                                    data-calories="280 kcal" 
-                                    data-img="img/biscoff.png">
-                                    View
+                                    data-category="Caffeinated Drinks"
+                                    data-name="Biscoff Latte"
+                                    data-price="₱200.00" 
+                                    data-calories="280 kcal"
+                                    data-img="img/biscoff.png"
+                                    data-description="A creamy espresso latte infused with caramelized Biscoff flavor and topped with crushed biscuit."
+                                    style="font-family: 'Poppins Light', sans-serif; font-size: 1.1rem; text-transform: uppercase;">
+                                    VIEW
                                     </button>  
                                     <img src="img/red-fill-cart.png" alt="cart" class="redcartt">
                                 </div>
@@ -129,23 +402,26 @@
                 </div>
             </div>
 
-            <div class="row mb-5">
+            <div class="row">
                 <div class="col-md-4 col-sm-6">
                     <div class="card home_card">
                         <img src="img/americano.png" class="card-img-top " alt="Iced Americano" />
                         <div class="card-body">
-                        <h5 class="card-title rdtxt"><b>Iced Americano</b></h5>
-                        <span class="text-muted">Calories: 250 kcal</span>
-                        <div class="mt-3 d-flex justify-content-between align-items-center">
-                            <span class="fw-bold fs-5">₱ 140.00</span>
+                        <h5 class="card-title rdtxt" style="font-family: 'Poppins Light', sans-serif;"><b>Iced Americano</b></h5>
+                        <span class="text-muted" style="font-family: 'Poppins Light', sans-serif; font-size: 1.1rem;">Calories: ~15 kcal</span>
+                        <div class="mt-1 d-flex justify-content-between align-items-center">
+                            <span class="fw-bold" style="font-family: 'Poppins SemiBold', sans-serif; font-size: 1.5rem;">₱140.00</span>
                                 <div class="d-flex align-items-center">
                                     <button 
                                     class="btn btn-warning btn-md yllwtab me-2 viewBtn" 
-                                    data-name="Iced Americano" 
-                                    data-price="₱ 140.00" 
-                                    data-calories="250 kcal" 
-                                    data-img="img/americano.png">
-                                    View
+                                    data-category="Caffeinated Drinks"
+                                    data-name="Iced Americano"
+                                    data-price="₱140.00" 
+                                    data-calories="~15 kcal"
+                                    data-img="img/americano.png"
+                                    data-description="Chilled espresso poured over ice with cold water for a bold, smooth finish."
+                                    style="font-family: 'Poppins Light', sans-serif; font-size: 1.1rem; text-transform: uppercase;">
+                                    VIEW
                                     </button>  
                                     <img src="img/red-fill-cart.png" alt="cart" class="redcartt">
                                 </div>
@@ -158,18 +434,21 @@
                     <div class="card home_card">
                         <img src="img/hazelnut.png" class="card-img-top " alt="Hazelnut Latte" />
                         <div class="card-body">
-                        <h5 class="card-title rdtxt"><b>Hazelnut Latte</b></h5>
-                        <span class="text-muted">Calories: 220 kcal</span>
-                        <div class="mt-3 d-flex justify-content-between align-items-center">
-                            <span class="fw-bold fs-5">₱ 170.00</span>
+                        <h5 class="card-title rdtxt" style="font-family: 'Poppins Light', sans-serif;"><b>Hazelnut Latte</b></h5>
+                        <span class="text-muted" style="font-family: 'Poppins Light', sans-serif; font-size: 1.1rem;">Calories: ~280 kcal</span>
+                        <div class="mt-1 d-flex justify-content-between align-items-center">
+                            <span class="fw-bold" style="font-family: 'Poppins SemiBold', sans-serif; font-size: 1.5rem;">₱170.00</span>
                                 <div class="d-flex align-items-center">
                                     <button 
                                     class="btn btn-warning btn-md yllwtab me-2 viewBtn" 
-                                    data-name="Hazelnut Latte" 
-                                    data-price="₱ 170.00" 
-                                    data-calories="220 kcal" 
-                                    data-img="img/hazelnut.png">
-                                    View
+                                    data-category="Caffeinated Drinks"
+                                    data-name="Hazelnut Latte"
+                                    data-price="₱170.00" 
+                                    data-calories="~280 kcal"
+                                    data-img="img/hazelnut.png"
+                                    data-description="A creamy latte infused with toasted hazelnut flavor, perfectly balanced."
+                                    style="font-family: 'Poppins Light', sans-serif; font-size: 1.1rem; text-transform: uppercase;">
+                                    VIEW
                                     </button>  
                                     <img src="img/red-fill-cart.png" alt="cart" class="redcartt">
                                 </div>
@@ -182,18 +461,21 @@
                     <div class="card home_card">
                         <img src="img/banana.png" class="card-img-top " alt="Banana Latte" />
                         <div class="card-body">
-                        <h5 class="card-title rdtxt"><b>Banana Latte</b></h5>
-                        <span class="text-muted">Calories: 280 kcal</span>
-                        <div class="mt-3 d-flex justify-content-between align-items-center">
-                            <span class="fw-bold fs-5">₱ 170.00</span>
+                        <h5 class="card-title rdtxt" style="font-family: 'Poppins Light', sans-serif;"><b>Banana Latte</b></h5>
+                        <span class="text-muted" style="font-family: 'Poppins Light', sans-serif; font-size: 1.1rem;">Calories: ~260 kcal</span>
+                        <div class="mt-1 d-flex justify-content-between align-items-center">
+                            <span class="fw-bold" style="font-family: 'Poppins SemiBold', sans-serif; font-size: 1.5rem;">₱170.00</span>
                                 <div class="d-flex align-items-center">
                                     <button 
                                     class="btn btn-warning btn-md yllwtab me-2 viewBtn" 
-                                    data-name="Banana Latte" 
-                                    data-price="₱ 170.00" 
-                                    data-calories="280 kcal" 
-                                    data-img="img/banana.png">
-                                    View
+                                    data-category="Caffeinated Drinks"
+                                    data-name="Banana Latte"
+                                    data-price="₱170.00" 
+                                    data-calories="~260 kcal"
+                                    data-img="img/banana.png"
+                                    data-description="Espresso meets the subtle sweetness of banana in this unique, creamy blend."
+                                    style="font-family: 'Poppins Light', sans-serif; font-size: 1.1rem; text-transform: uppercase;">
+                                    VIEW
                                     </button>  
                                     <img src="img/red-fill-cart.png" alt="cart" class="redcartt">
                                 </div>
@@ -205,27 +487,29 @@
         </div>
     </section>
 
-
-    <section class="mt-5">
+    <section class="mt-0 pt-0 mb-0 pb-0" style="margin-top: -12rem;">
         <div class="container">
-            <h2 class="yllwtxt fw-bold mb-5">Matcha Series</h2>
-            <div class="row mb-5">
+            <h2 class="yllwtxt mb-0 mt-0" style="margin-top: -2rem; margin-bottom: 1rem;">Matcha Series</h2>
+            <div class="row mb-0" style="margin-top: 1.5rem;">
                 <div class="col-md-4 col-sm-6">
                     <div class="card home_card">
                         <img src="img/dirty matcha.png" class="card-img-top " alt="Dirty Matcha" />
                         <div class="card-body">
-                        <h5 class="card-title rdtxt"><b>Dirty Matcha</b></h5>
-                        <span class="text-muted">Calories: 250 kcal</span>
-                        <div class="mt-3 d-flex justify-content-between align-items-center">
-                            <span class="fw-bold fs-5">₱ 200.00</span>
+                        <h5 class="card-title rdtxt" style="font-family: 'Poppins Light', sans-serif;"><b>Dirty Matcha</b></h5>
+                        <span class="text-muted" style="font-family: 'Poppins Light', sans-serif; font-size: 1.1rem;">Calories: ~210 kcal</span>
+                        <div class="mt-1 d-flex justify-content-between align-items-center">
+                            <span class="fw-bold" style="font-family: 'Poppins SemiBold', sans-serif; font-size: 1.5rem;">₱200.00</span>
                                 <div class="d-flex align-items-center">
                                     <button 
                                     class="btn btn-warning btn-md yllwtab me-2 viewBtn" 
-                                    data-name="Dirty Matcha" 
-                                    data-price="₱ 200.00" 
-                                    data-calories="250 kcal" 
-                                    data-img="img/dirty matcha.png">
-                                    View
+                                    data-category="Matcha Series"
+                                    data-name="Dirty Matcha"
+                                    data-price="₱200.00" 
+                                    data-calories="~210 kcal"
+                                    data-img="img/dirty matcha.png"
+                                    data-description="A fusion of earthy matcha and a shot of espresso over milk—bold and energizing."
+                                    style="font-family: 'Poppins Light', sans-serif; font-size: 1.1rem; text-transform: uppercase;">
+                                    VIEW
                                     </button>  
                                     <img src="img/red-fill-cart.png" alt="cart" class="redcartt">
                                 </div>
@@ -238,18 +522,21 @@
                     <div class="card home_card">
                         <img src="img/strawberry matcha.png" class="card-img-top " alt="Strawberry Matcha" />
                         <div class="card-body">
-                        <h5 class="card-title rdtxt"><b>Strawberry Matcha</b></h5>
-                        <span class="text-muted">Calories: 220 kcal</span>
-                        <div class="mt-3 d-flex justify-content-between align-items-center">
-                            <span class="fw-bold fs-5">₱ 200.00</span>
+                        <h5 class="card-title rdtxt" style="font-family: 'Poppins Light', sans-serif;"><b>Strawberry Matcha</b></h5>
+                        <span class="text-muted" style="font-family: 'Poppins Light', sans-serif; font-size: 1.1rem;">Calories: ~240 kcal</span>
+                        <div class="mt-1 d-flex justify-content-between align-items-center">
+                            <span class="fw-bold" style="font-family: 'Poppins SemiBold', sans-serif; font-size: 1.5rem;">₱200.00</span>
                                 <div class="d-flex align-items-center">
                                     <button 
                                     class="btn btn-warning btn-md yllwtab me-2 viewBtn" 
-                                    data-name="Strawberry Matcha" 
-                                    data-price="₱ 200.00" 
-                                    data-calories="220 kcal" 
-                                    data-img="img/strawberry matcha.png">
-                                    View
+                                    data-category="Matcha Series"
+                                    data-name="Strawberry Matcha"
+                                    data-price="₱200.00" 
+                                    data-calories="~240 kcal"
+                                    data-img="img/strawberry matcha.png"
+                                    data-description="Fresh strawberry purée layered with matcha and milk for a sweet, fruity twist."
+                                    style="font-family: 'Poppins Light', sans-serif; font-size: 1.1rem; text-transform: uppercase;">
+                                    VIEW
                                     </button>  
                                     <img src="img/red-fill-cart.png" alt="cart" class="redcartt">
                                 </div>
@@ -262,18 +549,21 @@
                     <div class="card home_card">
                         <img src="img/mango matcha.png" class="card-img-top " alt="Mango Matcha" />
                         <div class="card-body">
-                        <h5 class="card-title rdtxt"><b>Mango Matcha</b></h5>
-                        <span class="text-muted">Calories: 280 kcal</span>
-                        <div class="mt-3 d-flex justify-content-between align-items-center">
-                            <span class="fw-bold fs-5">₱ 200.00</span>
+                        <h5 class="card-title rdtxt" style="font-family: 'Poppins Light', sans-serif;"><b>Mango Matcha</b></h5>
+                        <span class="text-muted" style="font-family: 'Poppins Light', sans-serif; font-size: 1.1rem;">Calories: ~230 kcal</span>
+                        <div class="mt-1 d-flex justify-content-between align-items-center">
+                            <span class="fw-bold" style="font-family: 'Poppins SemiBold', sans-serif; font-size: 1.5rem;">₱200.00</span>
                                 <div class="d-flex align-items-center">
                                     <button 
                                     class="btn btn-warning btn-md yllwtab me-2 viewBtn" 
-                                    data-name="Mango Matcha" 
-                                    data-price="₱ 200.00" 
-                                    data-calories="280 kcal" 
-                                    data-img="img/mango matcha.png">
-                                    View
+                                    data-category="Matcha Series"
+                                    data-name="Mango Matcha"
+                                    data-price="₱200.00" 
+                                    data-calories="~230 kcal"
+                                    data-img="img/mango matcha.png"
+                                    data-description="Tropical mango purée meets smooth matcha and milk in this vibrant drink."
+                                    style="font-family: 'Poppins Light', sans-serif; font-size: 1.1rem; text-transform: uppercase;">
+                                    VIEW
                                     </button>  
                                     <img src="img/red-fill-cart.png" alt="cart" class="redcartt">
                                 </div>
@@ -285,26 +575,29 @@
         </div>
     </section>
 
-    <section class="mt-5">
+    <section class="mt-0 pt-0 mb-0 pb-0" style="margin-top: -2rem;">
         <div class="container">
-            <h2 class="yllwtxt fw-bold mb-5">Refreshers (Non-Caffeinated)</h2>
-            <div class="row mb-5">
+            <h2 class="yllwtxt mb-0 mt-0" style="margin-top: 0; margin-bottom: 1rem;">Refreshers (Non-Caffeinated)</h2>
+            <div class="row mb-0" style="margin-top: 1.5rem;">
                 <div class="col-md-4 col-sm-6">
                     <div class="card home_card">
                         <img src="img/butterfly pea flower tea.png" class="card-img-top " alt="Butterfly Pea Flower Tea" />
                         <div class="card-body">
-                        <h5 class="card-title rdtxt"><b>Butterfly Pea Flower Tea</b></h5>
-                        <span class="text-muted">Calories: 250 kcal</span>
-                        <div class="mt-3 d-flex justify-content-between align-items-center">
-                            <span class="fw-bold fs-5">₱ 160.00</span>
+                        <h5 class="card-title rdtxt" style="font-family: 'Poppins Light', sans-serif;"><b>Butterfly Pea Flower Tea</b></h5>
+                        <span class="text-muted" style="font-family: 'Poppins Light', sans-serif; font-size: 1.1rem;">Calories: ~20 kcal</span>
+                        <div class="mt-1 d-flex justify-content-between align-items-center">
+                            <span class="fw-bold" style="font-family: 'Poppins SemiBold', sans-serif; font-size: 1.5rem;">₱160.00</span>
                                 <div class="d-flex align-items-center">
                                     <button 
                                     class="btn btn-warning btn-md yllwtab me-2 viewBtn" 
-                                    data-name="Butterfly Pea Flower Tea" 
-                                    data-price="₱ 160.00" 
-                                    data-calories="520 kcal" 
-                                    data-img="img/butterfly pea flower tea.png">
-                                    View
+                                    data-category="Refreshers (Non-Caffeinated)"
+                                    data-name="Butterfly Pea Flower Tea"
+                                    data-price="₱160.00" 
+                                    data-calories="~20 kcal"
+                                    data-img="img/butterfly pea flower tea.png"
+                                    data-description="A naturally caffeine-free tea with floral notes and a stunning indigo hue."
+                                    style="font-family: 'Poppins Light', sans-serif; font-size: 1.1rem; text-transform: uppercase;">
+                                    VIEW
                                     </button>  
                                     <img src="img/red-fill-cart.png" alt="cart" class="redcartt">
                                 </div>
@@ -317,18 +610,21 @@
                     <div class="card home_card">
                         <img src="img/raspberry peach lemonade.png" class="card-img-top " alt="Raspberry Lemonade" />
                         <div class="card-body">
-                        <h5 class="card-title rdtxt"><b>Raspberry Lemonade</b></h5>
-                        <span class="text-muted">Calories: 220 kcal</span>
-                        <div class="mt-3 d-flex justify-content-between align-items-center">
-                            <span class="fw-bold fs-5">₱ 160.00</span>
+                        <h5 class="card-title rdtxt" style="font-family: 'Poppins Light', sans-serif;"><b>Raspberry Lemonade</b></h5>
+                        <span class="text-muted" style="font-family: 'Poppins Light', sans-serif; font-size: 1.1rem;">Calories: ~140 kcal</span>
+                        <div class="mt-1 d-flex justify-content-between align-items-center">
+                            <span class="fw-bold" style="font-family: 'Poppins SemiBold', sans-serif; font-size: 1.5rem;">₱160.00</span>
                                 <div class="d-flex align-items-center">
                                     <button 
                                     class="btn btn-warning btn-md yllwtab me-2 viewBtn" 
-                                    data-name="Raspberry Lemonade" 
-                                    data-price="₱ 160.00" 
-                                    data-calories="220 kcal" 
-                                    data-img="img/raspberry peach lemonade.png">
-                                    View
+                                    data-category="Refreshers (Non-Caffeinated)"
+                                    data-name="Raspberry Lemonade"
+                                    data-price="₱160.00" 
+                                    data-calories="~140 kcal"
+                                    data-img="img/raspberry peach lemonade.png"
+                                    data-description="Zesty lemonade with a burst of real raspberry flavor—refreshing and tangy."
+                                    style="font-family: 'Poppins Light', sans-serif; font-size: 1.1rem; text-transform: uppercase;">
+                                    VIEW
                                     </button>  
                                     <img src="img/red-fill-cart.png" alt="cart" class="redcartt">
                                 </div>
@@ -341,18 +637,20 @@
                     <div class="card home_card">
                         <img src="img/green apple soda.png" class="card-img-top " alt="Green Apple Soda" />
                         <div class="card-body">
-                        <h5 class="card-title rdtxt"><b>Green Apple Soda</b></h5>
-                        <span class="text-muted">Calories: 280 kcal</span>
-                        <div class="mt-3 d-flex justify-content-between align-items-center">
-                            <span class="fw-bold fs-5">₱ 160.00</span>
+                        <h5 class="card-title rdtxt" style="font-family: 'Poppins Light', sans-serif;"><b>Green Apple Soda</b></h5>
+                        <span class="text-muted" style="font-family: 'Poppins Light', sans-serif; font-size: 1.1rem;">Calories: ~150 kcal</span>
+                        <div class="mt-1 d-flex justify-content-between align-items-center">
+                            <span class="fw-bold" style="font-family: 'Poppins SemiBold', sans-serif; font-size: 1.5rem;">₱160.00</span>
                                 <div class="d-flex align-items-center">
                                     <button 
                                     class="btn btn-warning btn-md yllwtab me-2 viewBtn" 
-                                    data-name="Green Apple Soda Latte" 
-                                    data-price="₱ 160.00" 
-                                    data-calories="280 kcal" 
-                                    data-img="img/green apple soda.png">
-                                    View
+                                    data-category="Refreshers (Non-Caffeinated)"
+                                    data-name="Green Apple Soda"
+                                    data-price="₱160.00" 
+                                    data-calories="~150 kcal"
+                                    data-img="img/green apple soda.png"
+                                    style="font-family: 'Poppins Light', sans-serif; font-size: 1.1rem; text-transform: uppercase;">
+                                    VIEW
                                     </button>  
                                     <img src="img/red-fill-cart.png" alt="cart" class="redcartt">
                                 </div>
@@ -364,19 +662,18 @@
         </div>
     </section>
 
-    <footer class="py-4" id="footer">
+    <footer class="py-4 mt-5" id="footer">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 mb-3 mb-md-0">
-                    <strong class="yllwtxt fs-4">Connect With Us!</strong>
-                        <ul class="list-unstyled mt-2">
-                            <li><a href="https://www.facebook.com/goodbetterbread" class="text-white" target="_blank"><i class="bi bi-facebook me-2"></i>Facebook</a></li>
-                            <li><a href="https://www.instagram.com/goodbetterbread_/" class="text-white" target="_blank"><i class="bi bi-instagram me-2"></i>Instagram</a></li>
-                        </ul>
-                        </div>
-                        <div class="col-md-6 text-md-end">
-                        <img src="img/logo-white.png" alt="logo-white" class="img-fluid" style="width: 60px; margin-bottom: 10px;">
-                    <strong class="fs-4"><b class="text-white">Good</b><b class="yllwtxt">Better</b><b class="text-white">Bread</b></strong>
+                    <span class="footer-heading yllwtxt fs-4">Connect With Us!</span>
+                    <ul class="list-unstyled mt-2">
+                        <li><a href="https://www.facebook.com/goodbetterbread" class="footer-link text-white" target="_blank"><i class="bi bi-facebook me-2"></i>GoodBetterBread</a></li>
+                        <li><a href="https://www.instagram.com/goodbetterbread_/" class="footer-link text-white" target="_blank"><i class="bi bi-instagram me-2"></i>goodbetterbread_</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <img src="img/gbb.png" alt="gbb logo" class="footer-gbb-logo">
                 </div>
             </div>
         </div>
@@ -384,7 +681,7 @@
 
         <!-- Modal -->
     <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title rdtxt" id="productModalLabel">Product Name</h5>
@@ -393,15 +690,238 @@
             <div class="modal-body d-flex">
                 <img id="modalImage" src="" class="img-fluid me-4" alt="Product Image" style="width: 250px;">
                 <div>
+                  <h5 id="modalProductName" class="card-title rdtxt"><b>Product Name</b></h5>
                 <p><span class="text-muted" id="modalCalories">Calories: --- kcal</span></p>
-                <p class="fs-4 fw-bold"><span id="modalPrice">₱ ---</span></p>
+                <p class="fs-4 fw-bold" style="margin-bottom: 0;"><span id="modalPrice" style="font-family: 'Poppins SemiBold', sans-serif; font-size: 2rem;">₱ ---</span></p>
+                <p id="modalDescription" style="font-family: 'Poppins Light', sans-serif; font-size: 0.9rem;"></p>
+                <button id="addToCartBtn" class="btn btn-warning btn-md yllwtab mt-0" style="font-family: 'Poppins Light', sans-serif; font-size: 1.1rem; text-transform: uppercase;">ADD TO CART</button>
                 </div>
             </div>
             </div>
         </div>
     </div>
 
-     <script src="tryy.js"></script>
+    <!-- Cart Modal -->
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cartModalLabel">Your Cart</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="cartModalBody">
+                    <!-- Cart items will be listed here by JavaScript -->
+                </div>
+                <div class="modal-footer">
+                    <div id="cartTotal" style="font-family: 'Poppins SemiBold', sans-serif; font-size: 1.2rem;">Total: ₱0.00</div>
+                    <button type="button" class="btn btn-primary" id="checkoutButton">CHECK OUT</button>
+                    <!-- Add checkout button here later if needed -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="checkoutModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title w-100 text-center" id="checkoutModalLabel">
+                        <i class="bi bi-arrow-left me-2" id="backToCart" style="cursor: pointer; position: absolute; left: 1rem;"></i>
+                        Checkout
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5>Delivery Address</h5>
+                    <div class="mb-3">
+                        <textarea class="form-control" id="deliveryAddress" rows="3"></textarea>
+                    </div>
+
+                    <h5 class="mt-4">Order Summary</h5>
+                    <div id="orderSummary"></div>
+
+                    <h5 class="mt-4">Payment Method</h5>
+                    <div id="paymentOptions">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="paymentMethod" id="gcash" value="gcash" checked>
+                            <label class="form-check-label" for="gcash">GCash</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="paymentMethod" id="debitCard" value="debitCard">
+                            <label class="form-check-label" for="debitCard">Debit Card</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="paymentMethod" id="cashOnDelivery" value="cashOnDelivery">
+                            <label class="form-check-label" for="cashOnDelivery">Cash on Delivery</label>
+                        </div>
+                    </div>
+
+                    <h5 class="mt-4">Payment Details</h5>
+                    <p>Product Total: <span id="productTotal">₱0.00</span></p>
+                    <p>Delivery Fee: ₱50.00</p>
+
+                </div>
+                <div class="modal-footer">
+                    <div style="font-family: 'Poppins SemiBold', sans-serif; font-size: 1.2rem; color: hsl(0, 79%, 34%);">Total Payment: <span id="totalPayment">₱0.00</span></div>
+                    <button type="button" class="btn btn-warning" id="placeOrderButton" style="background-color: hsl(43, 94%, 55%); border-color: hsl(43, 94%, 55%); font-family: 'Poppins Light', sans-serif; font-size: 1rem; color: white; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='hsl(43, 94%, 45%)'; this.style.borderColor='hsl(43, 94%, 45%)'" onmouseout="this.style.backgroundColor='hsl(43, 94%, 55%)'; this.style.borderColor='hsl(43, 94%, 55%)'">PLACE ORDER</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="tryy.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    function scrollToSection(sectionId, tab) {
+        const drinksTab = document.getElementById('drinksTab');
+        const pastriesTab = document.getElementById('pastriesTab');
+        if(tab === 'drinks') {
+            drinksTab.classList.add('active', 'menu-tab-drinks');
+            drinksTab.classList.remove('menu-tab-pastries');
+            pastriesTab.classList.remove('active', 'menu-tab-pastries');
+            pastriesTab.classList.add('menu-tab-drinks');
+        } else {
+            pastriesTab.classList.add('active', 'menu-tab-pastries');
+            pastriesTab.classList.remove('menu-tab-drinks');
+            drinksTab.classList.remove('active', 'menu-tab-drinks');
+            drinksTab.classList.add('menu-tab-pastries');
+        }
+        document.getElementById(sectionId).scrollIntoView();
+    }
+    // Set default to pastries on load
+    window.onload = function() {
+        toggleMenuCategory('pastries');
+    }
+    </script>
+
+    <div id="loginModal" class="login-modal" style="display:none;">
+        <div class="login-modal-content">
+            <span class="login-close" id="loginClose">&times;</span>
+            <div class="login-title">Login</div>
+            <div class="login-subtitle">Log in to your account to proceed with your order.</div>
+            <form id="loginForm">
+                <input id="loginEmail" type="email" placeholder="Email" required />
+                <input id="loginPassword" type="password" placeholder="Password" required />
+                <button type="submit" class="login-btn">LOG IN</button>
+            </form>
+            <div class="login-signup-link">Don't have an account?<a href="#" id="openSignup">Sign up.</a></div>
+        </div>
+    </div>
+
+    <div id="signupModal" class="login-modal" style="display:none;">
+        <div class="login-modal-content">
+            <span class="login-close" id="signupClose">&times;</span>
+            <div class="login-title">Sign Up</div>
+            <div class="login-subtitle">Create an account to proceed with your order.</div>
+            <form id="signupForm">
+                <div class="signup-names-row">
+                    <input id="signupFirstName" type="text" placeholder="First Name" required />
+                    <input id="signupLastName" type="text" placeholder="Last Name" required />
+                </div>
+                <input id="signupEmail" type="email" placeholder="Email" required />
+                <input id="signupPassword" type="password" placeholder="Password" required />
+                <button type="submit" class="login-btn">SIGN UP</button>
+            </form>
+            <div class="login-signup-link">Already have an account?<a href="#" id="backToLogin">Log in.</a></div>
+        </div>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const loginModal = document.getElementById('loginModal');
+      const loginClose = document.getElementById('loginClose');
+      const signupModal = document.getElementById('signupModal');
+      const signupClose = document.getElementById('signupClose');
+      const openSignup = document.getElementById('openSignup');
+      const backToLogin = document.getElementById('backToLogin');
+      const loginForm = document.getElementById('loginForm');
+      const signupForm = document.getElementById('signupForm');
+      if (loginForm) {
+        loginForm.onsubmit = function(e) {
+          e.preventDefault();
+          const email = document.getElementById('loginEmail').value.trim();
+          const password = document.getElementById('loginPassword').value.trim();
+          if (email && password) {
+            // Show success message
+            const msg = document.createElement('div');
+            msg.textContent = 'You have successfully logged in.';
+            msg.style.fontFamily = 'Poppins Light, sans-serif';
+            msg.style.fontSize = '1.1rem';
+            msg.style.color = 'hsl(0, 79%, 34%)';
+            msg.style.textAlign = 'center';
+            msg.style.marginTop = '1.2rem';
+            loginForm.parentElement.appendChild(msg);
+            // Add loading spinner
+            const spinner = document.createElement('div');
+            spinner.className = 'login-loading-spinner';
+            loginForm.parentElement.appendChild(spinner);
+            setTimeout(function() {
+              window.location.href = 'index.html';
+            }, 1500 + 1000);
+          }
+        };
+      }
+      if (loginModal && loginClose) {
+        loginClose.onclick = function() {
+          loginModal.style.display = 'none';
+        };
+        window.onclick = function(event) {
+          if (event.target === loginModal) {
+            loginModal.style.display = 'none';
+          }
+          if (event.target === signupModal) {
+            signupModal.style.display = 'none';
+          }
+        };
+      }
+      if (openSignup && signupModal && loginModal) {
+        openSignup.onclick = function(e) {
+          e.preventDefault();
+          loginModal.style.display = 'none';
+          signupModal.style.display = 'flex';
+        };
+      }
+      if (signupClose && signupModal) {
+        signupClose.onclick = function() {
+          signupModal.style.display = 'none';
+        };
+      }
+      if (backToLogin && signupModal && loginModal) {
+        backToLogin.onclick = function(e) {
+          e.preventDefault();
+          signupModal.style.display = 'none';
+          loginModal.style.display = 'flex';
+        };
+      }
+      if (signupForm) {
+        signupForm.onsubmit = function(e) {
+          e.preventDefault();
+          const firstName = document.getElementById('signupFirstName').value.trim();
+          const lastName = document.getElementById('signupLastName').value.trim();
+          const email = document.getElementById('signupEmail').value.trim();
+          const password = document.getElementById('signupPassword').value.trim();
+          if (firstName && lastName && email && password) {
+            // Show success message
+            const msg = document.createElement('div');
+            msg.textContent = 'You have successfully signed up.';
+            msg.style.fontFamily = 'Poppins Light, sans-serif';
+            msg.style.fontSize = '1.1rem';
+            msg.style.color = 'hsl(0, 79%, 34%)';
+            msg.style.textAlign = 'center';
+            msg.style.marginTop = '1.2rem';
+            signupForm.parentElement.appendChild(msg);
+            // Add loading spinner
+            const spinner = document.createElement('div');
+            spinner.className = 'login-loading-spinner';
+            signupForm.parentElement.appendChild(spinner);
+            setTimeout(function() {
+              window.location.href = 'index.html';
+            }, 1500 + 1000);
+          }
+        };
+      }
+    });
+    </script>
 </body>
 </html>
